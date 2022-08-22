@@ -7,23 +7,23 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Exercise5 {
-	int SecondSmallest(int [] arr) 
-	{
-	Arrays.sort(arr);
-	return arr[1];
+	static void array(int [] arr) {
+		Arrays.sort(arr);
+		int number=arr[1];
+		System.out.println("The second smallest element is: "+number);
 	}
+	
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Number of elements");
-		int n = sc.nextInt();
+		System.out.println("Enter number of elements: ");
+		int n=sc.nextInt();
 		int [] arr = new int[n];
-		for(int i= 0;i<n;i++) {
+		System.out.println("Enter the elements: ");
+		for(int i=0;i<n;i++){
 			arr[i]=sc.nextInt();
 		}
-		Exercise5 e4= new Exercise5();
-		System.out.println(e4.SecondSmallest(arr));
-
+		array(arr);
+		
 	}
-
 }
